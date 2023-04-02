@@ -34,6 +34,7 @@ namespace CRUDWebApplication.Controllers
             {
             _context.Categories.Add(category);
             _context.SaveChanges();
+                TempData["Success"] = "Category Created Done!";
             return RedirectToAction("Index");
             }
             return View(category);
@@ -64,6 +65,7 @@ namespace CRUDWebApplication.Controllers
             {
                 _context.Categories.Update(category);
                 _context.SaveChanges();
+                TempData["Success"] = "Category Updated Done!";
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
@@ -97,6 +99,7 @@ namespace CRUDWebApplication.Controllers
             }
             _context.Categories.Remove(category);
             _context.SaveChanges();
+            TempData["Success"] = "Category Deleted Done!";
             return RedirectToAction("Index");
         }
 
