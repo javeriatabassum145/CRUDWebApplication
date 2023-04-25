@@ -8,7 +8,7 @@ namespace CRUDWebApplication.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please Enter Name")]
         public string? Name { get; set; }
 
         [DisplayName("Display Order")]
